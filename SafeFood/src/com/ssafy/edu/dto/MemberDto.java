@@ -7,11 +7,9 @@ public class MemberDto {
 	private String address;
 	private String email;
 	private String phoneNumber;
-	private String allergy;
 	public MemberDto() {
 	}
-	public MemberDto(String id, String password, String name, String address, String email, String phoneNumber,
-			String allergy) {
+	public MemberDto(String id, String password, String name, String address, String email, String phoneNumber) {
 		super();
 		this.id = id;
 		this.password = password;
@@ -19,7 +17,6 @@ public class MemberDto {
 		this.address = address;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
-		this.allergy = allergy;
 	}
 
 	public String getId() {
@@ -58,16 +55,10 @@ public class MemberDto {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public String getAllergy() {
-		return allergy;
-	}
-	public void setAllergy(String allergy) {
-		this.allergy = allergy;
-	}
 	@Override
 	public String toString() {
 		return "MemberDto [id=" + id + ", password=" + password + ", name=" + name + ", address=" + address + ", email="
-				+ email + ", phoneNumber=" + phoneNumber + ", allergy=" + allergy + "]";
+				+ email + ", phoneNumber=" + phoneNumber+ "]";
 	}
 	
 	

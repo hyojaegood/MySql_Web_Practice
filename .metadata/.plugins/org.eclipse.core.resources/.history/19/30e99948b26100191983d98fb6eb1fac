@@ -1,0 +1,12 @@
+package com.ssafy.edu.model;
+
+import java.util.ArrayList;
+
+import com.ssafy.edu.dto.FoodDto;
+
+public class FoodDaoImpl {
+	private ArrayList<FoodDto> foods=new ArrayList<FoodDto>();
+	public static void main(String[] args){
+		FoodDaoImpl test = new FoodDaoImpl();
+	}
+}

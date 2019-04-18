@@ -1,0 +1,62 @@
+package com.ssafy.edu.dto;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * FoodNutritionSAXHandler와 FoodSAXHandler를 이용해서 식품 정보를 load하는 SAX Parser 프로 그램  
+ *
+ */
+public class FoodSaxParser {
+	private String nutritionFilePath = "res/FoodNutritionInfo.xml";
+	private String foodFilePath = "./res/foodInfo.xml";
+	private StringBuilder xml ;
+	private List<FoodDto> foods;
+	private Map<String, FoodDto> foods2;
+ 	public FoodSaxParser() {
+		loadData();
+	}
+ 	
+ 	/**
+ 	 * FoodNutritionSAXHandler와 FoodSAXHandler를 이용 파싱한 식품 정보와 식품 영양 정보를  Food에 병합한다. 
+ 	 */
+	private void loadData() {
+		SAXParserFactory factory = SAXParserFactory.newInstance();
+		try{
+			SAXParser parser = factory.newSAXParser();
+			FoodSAXHandler handler = new FoodSAXHandler();
+			FoodNutritionSAXHandler nHandler = new FoodNutritionSAXHandler();
+			parser.parse(foodFilePath,handler);
+			parser.parse(nutritionFilePath,nHandler);
+			Map<Integer, FoodDto> foods = handler.getFoods();
+			foods2 = nHandler.getList();
+			System.out.println("load data");
+			FoodDto find;
+			System.out.println(foods.size()+" "+foods);
+			System.out.println(foods2.size()+" "+foods2);
+			//foodInfo db에 넣기
+			String sql=" INSERT INTO BOOKBOOK (ISBN,TITLE,AUTHOR,PUBLISHER,PUBDATE,PRICE) " + 
+					" VALUES(?,?,?,?,?,?) ";
+			Connection conn=null;
+			PreparedStatement psmt=null;
+			//foodNutrition 내용 업데이트
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	public List<FoodDto> getFoods() {
+		return foods;
+	}
+	public void setFoods(List<FoodDto> foods) {
+		this.foods = foods;
+	}
+	
+}

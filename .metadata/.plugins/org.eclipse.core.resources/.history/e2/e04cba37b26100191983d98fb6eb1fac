@@ -1,0 +1,12 @@
+package com.ssafy.edu.model;
+
+import java.util.ArrayList;
+
+import com.ssafy.edu.dto.FoodDto;
+
+public class FoodDaoImpl {
+	private ArrayList<FoodDto> foods=new ArrayList<>();
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+		FoodDaoImpl test = new FoodDaoImpl();
+	}
+}
