@@ -1,0 +1,12 @@
+package com.ssafy.edu.dao;
+
+import java.util.List;
+
+import com.ssafy.edu.dto.AllergyItemDto;
+import com.ssafy.edu.dto.FoodDto;
+
+public interface IFoodDao {
+	public List<FoodDto> getFoodList() throws Exception;
+	public void addFood(FoodDto dto) throws Exception;
+	public List<FoodDto> getFoodListByName(String id) throws Exception;
+}

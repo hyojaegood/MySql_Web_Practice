@@ -1,0 +1,20 @@
+package com.ssafy.edu.service;
+
+import java.util.List;
+
+import com.ssafy.edu.dto.UserDto;
+
+public interface IUserService {
+	public List<UserDto> getUserlist() throws Exception;
+	
+	public UserDto getUserById(String id) throws Exception;
+	
+	public void addUser(UserDto user)throws Exception;
+	public void updateUser(UserDto user)throws Exception;
+	
+	public void deleteUser(String id)throws Exception;
+	
+	public List<UserDto> getUserlike(String name) throws Exception;
+	
+	public UserDto userlogin(UserDto userdto) throws Exception;
+}

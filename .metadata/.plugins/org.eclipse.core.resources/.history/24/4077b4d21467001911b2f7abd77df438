@@ -1,0 +1,11 @@
+package com.ssafy.edu.dao;
+
+import java.util.List;
+
+import com.ssafy.edu.dto.AllergyItemDto;
+
+public interface IAllergyItemDao {
+	public List<AllergyItemDto> getAllergylist() throws Exception;
+	public void addAllergyItem(AllergyItemDto dto) throws Exception;
+	public List<AllergyItemDto> 
+}

@@ -1,0 +1,10 @@
+package com.ssafy.edu.controller;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class AllergyItemController {
+	String ns = "com.ssafy.edu.";
+	private SqlSession sqlSession;
+}

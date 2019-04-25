@@ -1,0 +1,5 @@
+package com.ssafy.edu.service;
+
+public interface IAllergyItemService {
+
+}

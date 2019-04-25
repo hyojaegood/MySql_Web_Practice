@@ -1,0 +1,51 @@
+package com.ssafy.edu.dao;
+
+import java.util.List;
+
+import com.ssafy.edu.dto.MemberDto;
+
+public class MemberDaoImple implements IMemberDao {
+
+	@Override
+	public List<MemberDto> getMemberlist() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MemberDto getUserById(String id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addUser(MemberDto dto) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateUser(MemberDto dto) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteUser(String id) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<MemberDto> getUserlike(String name) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MemberDto userlogin(MemberDto dto) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

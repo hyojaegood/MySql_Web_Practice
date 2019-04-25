@@ -1,0 +1,48 @@
+package com.ssafy.edu.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.ssafy.edu.dto.UserDto;
+
+@Repository
+public class UserDao {
+	String ns="com.ssafy.edu.";
+	
+	@Autowired
+	private SqlSession sqlSession;
+	
+	public List<UserDto> getUserlist() throws Exception{
+		return sqlSession.selectList(ns+"getUserlist");
+	}
+	
+	public UserDto getUserById(String id) throws Exception{
+		return sqlSession.selectOne(ns+"getUserById",id);
+	}
+	
+	public void addUser(UserDto user)throws Exception{
+		 sqlSession.insert(ns+"addUser",user);
+	}
+	public void updateUser(UserDto user)throws Exception{
+		 sqlSession.update(ns+"updateUser",user);
+	}
+	
+	public void deleteUser(String id)throws Exception{
+		 sqlSession.delete(ns+"deleteUser",id);
+	}
+	
+	public List<UserDto> getUserlike(String name) throws Exception{
+		return sqlSession.selectList(ns+"getUserlike",name);
+	}
+	
+	
+	public UserDto userlogin(UserDto userdto) throws Exception{
+		return sqlSession.selectOne(ns+"userlogin",userdto);
+	}
+	
+	
+	
+}

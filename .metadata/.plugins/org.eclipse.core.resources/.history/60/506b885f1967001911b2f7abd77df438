@@ -1,0 +1,33 @@
+package com.ssafy.edu.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ssafy.edu.dao.AllergyItemDaoImple;
+import com.ssafy.edu.dto.AllergyItemDto;
+@Service
+public class AllergyItemServiceImple implements IAllergyItemService {
+	
+	@Autowired
+	private AllergyItemDaoImple dao;
+	@Override
+	public List<AllergyItemDto> getAllergylist() throws Exception {
+		// TODO Auto-generated method stub
+		return dao.getAllergylist();
+	}
+
+	@Override
+	public void addAllergyItem(AllergyItemDto dto) throws Exception {
+		// TODO Auto-generated method stub
+		dao.addAllergyItem(dto);
+	}
+
+	@Override
+	public List<AllergyItemDto> getAllergylistByMemeberId(String id) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.getAllergylistByMemeberId(id);
+	}
+
+}

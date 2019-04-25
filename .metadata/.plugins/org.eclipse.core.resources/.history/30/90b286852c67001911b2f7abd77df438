@@ -1,0 +1,59 @@
+package com.ssafy.edu.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ssafy.edu.dao.UserDao;
+import com.ssafy.edu.dto.UserDto;
+@Service
+public class UserServiceImpl implements IUserService {
+	
+	@Autowired
+	private UserDao userDao;
+	
+	@Override
+	@Transactional(readOnly=true)
+	public List<UserDto> getUserlist() throws Exception {
+		return userDao.getUserlist();
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public UserDto getUserById(String id) throws Exception {
+		return userDao.getUserById(id);
+	}
+
+	@Override
+	@Transactional
+	public void addUser(UserDto user) throws Exception {
+		userDao.addUser(user);
+	}
+
+	@Override
+	@Transactional
+	public void updateUser(UserDto user) throws Exception {
+		userDao.updateUser(user);
+	}
+
+	@Override
+	@Transactional
+	public void deleteUser(String id) throws Exception {
+		userDao.deleteUser(id);
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public List<UserDto> getUserlike(String name) throws Exception {
+		return userDao.getUserlike(name);
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public UserDto userlogin(UserDto userdto) throws Exception {
+		return userDao.userlogin(userdto);
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.ssafy.edu.dao;
+
+public interface IMemberDao {
+	public List<MemberDto> getUserlist() throws Exception;
+	
+	public UserDto getUserById(String id) throws Exception;
+	
+	public void addUser(UserDto user)throws Exception;
+	public void updateUser(UserDto user)throws Exception;
+	
+	public void deleteUser(String id)throws Exception;
+	
+	public List<UserDto> getUserlike(String name) throws Exception;
+	
+	
+	public UserDto userlogin(UserDto userdto) throws Exception;
+}

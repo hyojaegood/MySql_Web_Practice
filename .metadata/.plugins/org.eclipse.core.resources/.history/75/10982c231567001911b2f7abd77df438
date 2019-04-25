@@ -1,0 +1,7 @@
+package com.ssafy.edu.dto;
+
+public class FoodItemDto {
+	private int foodItemNum;//PK
+	private String memberId;
+	private int foodNum;
+}
