@@ -3,12 +3,17 @@
 	<item value="false" key="J2EE_EXPORT_OVERWRITE"/>
 	<item value="true" key="J2EE_EXPORT_SOURCE"/>
 	<list key="J2EE_IMPORT_null">
+		<item value="C:\Users\student\Downloads\ssafyspringSafeFood_3.war"/>
+		<item value="C:\Users\student\Desktop\ssafyspring0425_3.war"/>
 		<item value="C:\Users\student\Desktop\ssafy0417.war"/>
 	</list>
 	<list key="MRU_RUNTIME_STORE">
 		<item value="NULL_RUNTIME"/>
 	</list>
 	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="C:\Users\student\Downloads\SafeFood_Spring_daejeon_3_ParkHanBeom_JuHyoJae.war"/>
+		<item value="C:\Users\student\Desktop\ssafyspringSafeFood_2.war"/>
+		<item value="C:\Users\student\Desktop\ssafyspringSafeFood.war"/>
 		<item value="C:\Users\student\Desktop\hw_db_0417_주효재.war"/>
 		<item value="C:\Users\student\Desktop\ws_db_0417_주효재.war"/>
 	</list>

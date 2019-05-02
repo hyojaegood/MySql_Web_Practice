@@ -1,5 +1,0 @@
-package com.ssafy.edu.dao;
-
-public interface IAllergyItemDao {
-	public List<AllergyItemDto> getBooklist() throws Exception
-}

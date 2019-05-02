@@ -1,7 +1,0 @@
-package com.ssafy.edu.dao;
-
-import java.util.List;
-
-public interface IAllergyItemDao {
-	public List<AllergyItemDto> getBooklist() throws Exception
-}

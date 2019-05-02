@@ -17,15 +17,34 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
+		<item value="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.server.ui"/>
+			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
+			<item value="org.eclipse.wst.XMLCategory"/>
+		</list>
 	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.jst.servlet.ui.internal.wizard.WebComponentExportWizard" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
-		<item value="org.eclipse.jst.servlet.ui.internal.wizard.WebComponentImportWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.wst.web.ui"/>
 		</list>
 		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="ZipFileImportWizard">
+	</section>
+	<section name="ZipFileExportWizard">
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\student\Pictures\SafeFood_Spring_daejeon_3_ParkHanBeom_JuHyoJae.zip"/>
+			<item value="C:\Users\student\Documents\SafeFood_Spring_daejeon_3_ParkHanBeom_JuHyoJae.zip"/>
+			<item value="C:\Users\student\Downloads\SafeFood_Spring_daejeon_3_ParkHanBeom_JuHyoJae.zip"/>
 		</list>
 	</section>
 </section>

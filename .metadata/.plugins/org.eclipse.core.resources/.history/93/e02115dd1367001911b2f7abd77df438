@@ -1,6 +1,0 @@
-package com.ssafy.edu.dto;
-
-public class AllergyItemDto {
-	private String memberId;
-	private String ingredient;
-}

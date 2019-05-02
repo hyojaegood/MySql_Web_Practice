@@ -1,9 +1,0 @@
-package com.ssafy.edu.dto;
-
-public class FoodDataBase {
-	private boolean isLog=true;
-	private String DRVIER="com.mysql.cj.jdbc.Driver";
-	private String UURL="jdbc:mysql://localhost:3306/ssafyhrm?useUniCode=yes&characterEncoding=UTF-8&serverTimezone=Asia/Seoul";
-	private String USER="ssafy";
-	private String PWD="ssafy";
-}

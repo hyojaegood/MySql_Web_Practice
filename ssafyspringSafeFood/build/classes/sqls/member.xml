@@ -9,7 +9,57 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		 SELECT ID, PASSWORD, NAME, ADDRESS, EMAIL, PHONENUMBER FROM member
          WHERE ID=#{id} AND PASSWORD= #{password}
 	</select>
+	<insert id="insertMember" parameterType="com.ssafy.edu.dto.MemberDto">
+		INSERT INTO Member (id,password,name,address,email,phoneNumber)
+		VALUES(#{id},#{password},#{name},#{address},#{email},#{phoneNumber})
+	</insert>
 	
+	<update id="updateMember" parameterType="com.ssafy.edu.dto.MemberDto">
+	UPDATE Member SET password=#{password},name=#{name},address=#{address},
+	email=#{email},phoneNumber=#{phoneNumber} WHERE id=#{id} 
+	</update>
 	
+	<delete id="deleteMember" parameterType="com.ssafy.edu.dto.MemberDto">
+	DELETE FROM Member WHERE id=#{id} 
+	</delete>
 	
+	<select id="findMemberById" parameterType="com.ssafy.edu.dto.MemberDto"
+	resultType="com.ssafy.edu.dto.MemberDto">
+	SELECT id,password,name,address,email,phoneNumber FROM Member WHERE id=#{id}
+	</select>
+	
+	<select id="findAllMember" resultType="com.ssafy.edu.dto.MemberDto">
+	SELECT id,password,name,address,email,phoneNumber FROM Member
+	</select>
+	
+	<insert id="addAllergy" parameterType="com.ssafy.edu.dto.AllergyItemDto">
+	INSERT INTO Allergy (id,Inum) VALUES(#{id},#{Inum}) 
+	</insert>
+	
+	<delete id="deleteAllergy" parameterType="com.ssafy.edu.dto.AllergyItemDto">
+	DELETE FROM Allergy WHERE id=#{id}
+	</delete>
+	
+	<select id="findAllAllergy" resultType="com.ssafy.edu.dto.AllergyItemDto">
+	SELECT id,Inum FROM Allergy
+	</select>
+	
+	<select id="findAllergyById" resultType="com.ssafy.edu.dto.AllergyItemDto" 
+	parameterType="com.ssafy.edu.dto.AllergyItemDto">
+	SELECT id,Inum FROM Allergy WHERE id=#{id}
+	</select>
+	
+	<select id="findAllIngredient" resultType="com.ssafy.edu.dto.IngredientDto">
+	SELECT Inum,name FROM Ingredient
+	</select>
+	
+	<select id="findIngredientbyName" resultType="com.ssafy.edu.dto.IngredientDto"
+	parameterType="com.ssafy.edu.dto.IngredientDto">
+	SELECT Inum,name FROM Ingredient where name=#{name};
+	</select>
+	
+	<select id="getAllergy" parameterType="com.ssafy.edu.dto.MemberDto"
+	resultType="java.lang.String">
+	select i.name from Ingredient i join Allergy a on i.Inum=a.Inum where a.id=#{id}"
+	</select>
  </mapper>
